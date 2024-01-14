@@ -42,6 +42,8 @@ The designs were created to the following widths:
 
     .container {
         display: flex;
+        flex-direction: row;
+
     }
 
     img {
@@ -50,6 +52,14 @@ The designs were created to the following widths:
         border-bottom-left-radius: 20px;
         height: 100%;
 
+    }
+
+    .product-info {
+        padding: 2.5rem;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 300px;
+        height: 100%;
     }
 
 }
@@ -62,11 +72,32 @@ The designs were created to the following widths:
         display: block;
     }
 
-    img {
-        max-width: 250px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+    img.image {
+        width: 330px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
 
+    }
+
+    .product-info {
+        border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 330px;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .container{
+        margin: 0.3rem;
+        padding: 1rem;
+    }
+
+    p{
+        padding-right: 2rem;
+    }
+
+    button{
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -77,6 +108,13 @@ $Dark-grayish-blue: hsl(228, 12%, 48%);
 $White: hsl(0, 0%, 100%);
 $spacing: 2rem;
 
+* {
+    font-family: 'Fraunces', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
 body {
     background-color: $Cream;
 }
@@ -86,16 +124,71 @@ body {
     justify-content: center;
     min-height: 100vh;
     max-height: 100vh;
-    padding: $spacing;
-    margin: auto;
-    flex-direction: row;
+
 }
 
 .product-info {
-    padding: 2.5rem;
     background-color: $White;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    width: 250px;
-    height: 100%;
 }
+
+h3{
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: small;
+    color: $Dark-grayish-blue;
+    letter-spacing: 0.5em;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: 2rem;
+    color: $Very-dark-blue;
+    padding-bottom: 0.7em;
+    padding-top: 0.7em;
+
+}
+
+p{
+    padding-bottom: 1em;
+    font-family: 'Montserrat';
+    font-size: small;
+    color: $Dark-grayish-blue;
+}
+
+.prices{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2rem;
+    align-items: center;
+}
+
+.price-after{
+    padding-right: 1rem;
+    font-size: xx-large;
+    color: $Dark-cyan;
+    font-weight: bolder;
+}
+
+.price-before{
+    text-decoration: line-through;
+    font-family: 'Montserrat';
+    color: $Dark-grayish-blue;
+}
+
+button{
+    background-color: $Dark-cyan;
+    color: $White;
+    width: 100%;
+    border-radius: 10px;  
+    border-style: none;
+    padding: 1em;
+    text-align: center;
+    margin-right: auto;
+
+}
+
+ button > img{
+    padding-right: 0.5em;
+    align-items: center;
+ }

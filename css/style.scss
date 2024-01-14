@@ -1,0 +1,101 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
+
+*/
+
+/* styles for desktop devices */
+@media only screen and (min-width: 1440px) {
+
+    .container {
+        display: flex;
+    }
+
+    img {
+        object-fit: inherit;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        height: 100%;
+
+    }
+
+}
+
+/* styles for mobile devices */
+@media only screen and (max-width: 375px) {
+
+
+    .container {
+        display: block;
+    }
+
+    img {
+        max-width: 250px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+    }
+}
+
+$Dark-cyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+$Very-dark-blue: hsl(212, 21%, 14%);
+$Dark-grayish-blue: hsl(228, 12%, 48%);
+$White: hsl(0, 0%, 100%);
+$spacing: 2rem;
+
+body {
+    background-color: $Cream;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-height: 100vh;
+    padding: $spacing;
+    margin: auto;
+    flex-direction: row;
+}
+
+.product-info {
+    padding: 2.5rem;
+    background-color: $White;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 250px;
+    height: 100%;
+}
